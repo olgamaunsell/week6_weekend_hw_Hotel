@@ -20,4 +20,8 @@ public class Room {
     public int getGuestCount() {
         return this.guests.size();
     }
+
+    public void checkInGuest(Guest guest) {
+        this.guests.add(guest);
+    }
 }
