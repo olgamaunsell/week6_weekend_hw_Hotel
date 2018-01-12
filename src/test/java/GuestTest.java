@@ -20,3 +20,5 @@ public class GuestTest {
 
     }
 }
+
+//    Create a Guest class so that guests can be checked in/out of rooms.

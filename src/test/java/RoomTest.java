@@ -17,5 +17,11 @@ public class RoomTest {
     public void canGetRoomNumber(){
         assertEquals(1, room.getRoomNumber());
     }
+
+    @Test
+
+    public void roomStartsEmpty(){
+        assertEquals(0, room.getGuestCount());
+    }
 }
 
