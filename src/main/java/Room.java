@@ -24,4 +24,8 @@ public class Room {
     public void checkInGuest(Guest guest) {
         this.guests.add(guest);
     }
+
+    public void checkOutGuest(Guest guest) {
+        this.guests.remove(guest);
+    }
 }

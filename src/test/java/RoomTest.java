@@ -27,9 +27,18 @@ public class RoomTest {
 
     @Test
 
-    public void canAddGuestToRoom(){
+    public void canCheckInGuestToRoom(){
         room.checkInGuest(guest1);
         assertEquals(1,room.getGuestCount());
+    }
+
+    @Test
+
+    public void canCheckOutGuestFromRoom(){
+        room.checkInGuest(guest1);
+        int guestCountBefore = room.getGuestCount();
+        room.checkOutGuest(guest1);
+        assertEquals(guestCountBefore-1,room.getGuestCount());
     }
 }
 
