@@ -1,6 +1,6 @@
 public enum RoomType {
-    SINGLE(1, 60),
-    DOUBLE(2, 100),
+    Single(1, 60),
+    Double(2, 100),
     Triple(3, 120),
     DoubleDeluxe(2, 180),
     DoublePentHouse(4, 400);

@@ -21,4 +21,8 @@ public class Room {
     public void checkOutGuest(Guest guest) {
         this.guests.remove(guest);
     }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
 }

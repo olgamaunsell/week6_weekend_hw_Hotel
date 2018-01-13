@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,11 @@ public class RoomTest {
         room1 = new Room(1);
         guest1 = new Guest("Jimmy Choo");
         guest2 = new Guest("Lis Smith");
+    }
+
+    @Test
+    public void canGetCapacity(){
+        assertEquals(1, room1.getCapacity());
     }
 
     @Test
