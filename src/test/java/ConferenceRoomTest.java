@@ -27,5 +27,11 @@ public class ConferenceRoomTest {
         assertEquals("Sunny Room", conferenceRoom.getName());
     }
 
+    @Test
+
+    public void canGetRate(){
+        assertEquals(90.0, conferenceRoom.getRate(), 0.01);
+    }
+
 
 }
