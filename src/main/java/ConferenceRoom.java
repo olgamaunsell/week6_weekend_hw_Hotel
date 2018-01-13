@@ -12,4 +12,8 @@ public class ConferenceRoom extends Room {
     public String getName() {
         return this.name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

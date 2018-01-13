@@ -19,4 +19,13 @@ public class ConferenceRoomTest {
         assertEquals("Sun Room", conferenceRoom.getName());
 
     }
+
+    @Test
+
+    public void canChangeName(){
+        conferenceRoom.setName("Sunny Room");
+        assertEquals("Sunny Room", conferenceRoom.getName());
+    }
+
+
 }
