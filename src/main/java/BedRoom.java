@@ -12,6 +12,7 @@ public class BedRoom extends Room  {
         super(capacity);
         this.roomNumber = roomNumber;
         this.roomType = roomType;
+        this.guests = new ArrayList<>();
     }
 
     public int getRoomNumber() {

@@ -19,6 +19,25 @@ public class GuestTest {
         assertEquals("Jimmy Choo", guest.getName());
 
     }
+
+    @Test
+
+    public void canChangeName(){
+        guest.setName("James Brown");
+        assertEquals("James Brown", guest.getName());
+
+    }
+
+    @Test
+    public void cantChangeNameToEmpty(){
+        guest.setName("");
+        assertEquals("Jimmy Choo", guest.getName());
+    }
+
+    @Test
+    public void cantChangeNameToNull(){
+        guest.setName(null);
+        assertEquals("Jimmy Choo", guest.getName());
+    }
 }
 
-//    Create a Guest class so that guests can be checked in/out of rooms.
