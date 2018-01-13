@@ -14,7 +14,7 @@ public class DiningRoomTest  {
 
     public void before(){
 
-        diningRoom = new DiningRoom(150);
+        diningRoom = new DiningRoom(150, false );
         guest1 = new Guest("Donald Duck");
         guest2 = new Guest("Mickey Mouse");
     }
@@ -30,4 +30,5 @@ public class DiningRoomTest  {
         assertEquals(guestCountBefore + 2, diningRoom.getGuestCount());
 
     }
+
 }

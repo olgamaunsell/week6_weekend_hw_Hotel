@@ -12,7 +12,7 @@ public class BedRoomTest {
     @Before
 
     public void before(){
-        bedRoom1 = new BedRoom(1, 24, RoomType.Single);
+        bedRoom1 = new BedRoom(1, true, 24, RoomType.Single);
         guest1 = new Guest("Jimmy Choo");
         guest2 = new Guest("Lis Smith");
     }
@@ -38,5 +38,11 @@ public class BedRoomTest {
     public void canCheckInGuestToRoom() {
         bedRoom1.checkInGuest(guest1);
         assertEquals(1, bedRoom1.getGuestCount());
+    }
+
+    @Test
+
+    public void canGetRoomRate(){
+        assertEquals(60, bedRoom1.getRoomRate(), 0.01);
     }
 }

@@ -14,7 +14,8 @@ public class RoomTest {
     @Before
 
     public void before() {
-        room1 = new Room(1);
+        room1 = new Room(1, true);
+        room2 = new Room(3, true );
         guest1 = new Guest("Jimmy Choo");
         guest2 = new Guest("Lis Smith");
     }
@@ -24,6 +25,12 @@ public class RoomTest {
         assertEquals(1, room1.getCapacity());
     }
 
+    @Test
+
+    public void canGetChargeable(){
+        assertEquals(true, room1.getChargeable());
+
+    }
     @Test
 
     public void roomStartsEmpty() {
@@ -36,6 +43,28 @@ public class RoomTest {
         room1.checkInGuest(guest1);
         assertEquals(1, room1.getGuestCount());
     }
+
+//    @Test
+//
+//    public void cantCheckIn2GueststoSingle(){
+//        int guestCountBefore = room1.getGuestCount();
+//        room1.checkInGuest(guest1);
+//        room1.checkInGuest(guest2);
+//
+//        assertEquals(guestCountBefore, room1.getGuestCount());
+//
+//    }
+
+//    @Test
+//
+//    public void canCheckInIfRoomhasCapacity(){
+//        int guestCountBefore = room2.getGuestCount();
+//        room2.checkInGuest(guest1);
+//        room2.checkInGuest(guest2);
+//
+//        assertEquals(guestCountBefore + 2, room2.getGuestCount());
+//
+//    }
 
     @Test
 
@@ -57,4 +86,6 @@ public class RoomTest {
         assertEquals(guestCountBefore + 2, room1.getGuestCount());
 
     }
+
+
 }

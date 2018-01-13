@@ -6,8 +6,8 @@ public class ConferenceRoom extends Room {
     private String name;
     private double rate;
 
-    public ConferenceRoom(int capacity, String name, double rate){
-        super(capacity);
+    public ConferenceRoom(int capacity, boolean chargeable, String name, double rate){
+        super(capacity, chargeable);
         this.guests = new ArrayList<>();
         this.name = name;
         this.rate = rate;
