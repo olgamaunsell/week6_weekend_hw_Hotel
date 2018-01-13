@@ -2,19 +2,12 @@ import java.util.ArrayList;
 
 public class Room {
 
-    private int roomNumber;
-    private RoomType roomType;
+    private int capacity;
     private ArrayList<Guest> guests;
 
-    public Room(int roomNumber, RoomType roomType) {
-
-        this.roomNumber = roomNumber;
-        this.roomType = roomType;
+    public Room(int capacity) {
+        this.capacity = capacity;
         this.guests = new ArrayList<>();
-    }
-
-    public int getRoomNumber() {
-        return this.roomNumber;
     }
 
     public int getGuestCount() {
