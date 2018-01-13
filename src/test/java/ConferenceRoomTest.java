@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class ConferenceRoomTest {
 
     ConferenceRoom conferenceRoom;
+    Guest guest1;
 
     @Before
 
@@ -34,4 +35,10 @@ public class ConferenceRoomTest {
     }
 
 
+    @Test
+
+    public void canCheckInGuestToRoom() {
+        conferenceRoom.checkInGuest(guest1);
+        assertEquals(1, conferenceRoom.getGuestCount());
+    }
 }

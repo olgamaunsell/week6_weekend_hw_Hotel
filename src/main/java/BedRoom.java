@@ -10,9 +10,9 @@ public class BedRoom extends Room  {
     public BedRoom(int capacity, int roomNumber, RoomType roomType) {
 //        will override capacity in this class to use the RoomType capacity ??
         super(capacity);
+        this.guests = new ArrayList<>();
         this.roomNumber = roomNumber;
         this.roomType = roomType;
-        this.guests = new ArrayList<>();
     }
 
     public int getRoomNumber() {
