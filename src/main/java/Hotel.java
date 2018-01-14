@@ -8,6 +8,7 @@ public class Hotel {
     private ArrayList<BedRoom> bedRooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
     private ArrayList<DiningRoom> diningRooms;
+    private ArrayList<Guest> guests;
 
 
     public Hotel(String name, double till, ArrayList<BedRoom> bedRooms, ArrayList<ConferenceRoom> conferenceRooms,
@@ -58,6 +59,14 @@ public class Hotel {
     }
 
 
+    public void checkInGuestsToRoom(ArrayList<Guest> guests, BedRoom bedroom) {
 
+        for (BedRoom bedRoom : this.bedRooms){
+            {
+            for (Guest guest : guests) {
+                bedroom.checkInGuest(guest);
+            }
 
+        }
+    }
 }

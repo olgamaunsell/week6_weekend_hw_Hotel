@@ -22,8 +22,10 @@ public class HotelTest {
     private ConferenceRoom conferenceRoom4;
     ArrayList<DiningRoom> diningRooms;
     private DiningRoom diningRoom1;
+    ArrayList<Guest> guests;
     private Guest guest1;
     private Guest guest2;
+
 
     @Before
 
@@ -49,6 +51,9 @@ public class HotelTest {
 
         guest1 = new Guest("Donald Trump");
         guest2 = new Guest("Nicola Sturgeon");
+        guests = new ArrayList<>();
+        guests.add(guest1);
+        guests.add(guest2);
 
     }
 
@@ -137,6 +142,8 @@ public class HotelTest {
     @Test
 
     public void canCheckInGuestsToBedRoom(){
+        hotel.checkInGuestsToRoom(guests, bedRoom1);
+        assertEquals(2, bedRoom1.getGuestCount());
 
     }
 }
