@@ -13,13 +13,33 @@ public class Hotel {
     public Hotel(String name, double till){
         this.name = name;
         this.till = till;
-        this.bedRooms = bedRooms;
+        this.bedRooms = new ArrayList<>();
 // should I have separate array lists for vacant and occupied bedrooms ?
-        this.conferenceRooms = conferenceRooms;
-        this.diningRooms = diningRooms;
+        this.conferenceRooms = new ArrayList<>();
+        this.diningRooms = new ArrayList<>();
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public int getBedRoomCount() {
+        return this.bedRooms.size();
+    }
+
+    public int getConferenceRoomCount() {
+        return this.conferenceRooms.size();
+    }
+
+    public int getDiningRoomCount() {
+        return this.diningRooms.size();
+    }
+
+    public void addBedRoom(BedRoom bedRoom) {
+        this.bedRooms.add(bedRoom);
+    }
+
+    public void removeBedRoom(BedRoom bedRoom) {
+        this.bedRooms.remove(bedRoom);
     }
 }

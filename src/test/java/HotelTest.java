@@ -8,11 +8,15 @@ public class HotelTest {
     private Hotel hotel;
     private String name;
     private double till;
+    private BedRoom bedRoom1;
+    private BedRoom bedRoom2;
 
     @Before
 
     public void before(){
         hotel = new Hotel("The Carlton", 0.00);
+        bedRoom1 = new BedRoom(2, true, 8, RoomType.DoubleDeluxe);
+        bedRoom2 = new BedRoom(3, true, 8, RoomType.Triple);
     }
 
     @Test
@@ -20,13 +24,57 @@ public class HotelTest {
     public void canGetName(){
         assertEquals("The Carlton", hotel.getName());
     }
+
+    @Test
+
+    public void bedRoomListStartsEmpty(){
+        assertEquals(0, hotel.getBedRoomCount());
+
+    }
+
+    @Test
+
+    public void conferenceRoomListStartsEmpty(){
+        assertEquals(0, hotel.getConferenceRoomCount());
+
+    }
+
+    @Test
+
+    public void diningRoomListStartsEmpty(){
+        assertEquals(0, hotel.getDiningRoomCount());
+
+    }
+
+    @Test
+
+    public void canAddTwoBedRoomsToBedRoomList(){
+        int bedRoomCountBefore = hotel.getBedRoomCount();
+
+        hotel.addBedRoom(bedRoom1);
+        hotel.addBedRoom(bedRoom2);
+        assertEquals(bedRoomCountBefore+2,hotel.getBedRoomCount() );
+
+    }
+
+    @Test
+
+    public void canRemoveOneBedRoomFromBedRoomList(){
+        int bedRoomCountBefore = hotel.getBedRoomCount();
+
+        hotel.addBedRoom(bedRoom1);
+        hotel.addBedRoom(bedRoom2);
+        hotel.removeBedRoom(bedRoom2);
+        assertEquals(bedRoomCountBefore+1,hotel.getBedRoomCount() );
+
+    }
 }
 
 
 //tests to
-//1. add bedroom to bedroom array list
+//1. add bedroom to bedroom array list - done
 //2. add conference room to conf room list
-//3.  remove bedroom from bedroom list
+//3.  remove bedroom from bedroom list - done
 //4.  remove conf room from conf room list
 //5. checkin guest(s) to a room (pass in array of guests)
 // if room chargeable - "pay room" method uses room rate to add to hotel till
