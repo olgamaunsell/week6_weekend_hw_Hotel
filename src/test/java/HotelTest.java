@@ -1,13 +1,25 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class HotelTest {
+
+    private Hotel hotel;
+    private String name;
+    private double till;
 
     @Before
 
     public void before(){
-
+        hotel = new Hotel("The Carlton", 0.00);
     }
 
+    @Test
+
+    public void canGetName(){
+        assertEquals("The Carlton", hotel.getName());
+    }
 }
 
 
@@ -27,7 +39,10 @@ public class HotelTest {
 // - checkinguests(array) size <= room guests (array) size
 //extensions
 //1.	Add functionality to the hotel so it can see a list of vacant bedrooms.
-//
+// check the bedroom array list - use bedroom.getGuestCount() to determine which rooms are empty
+// - store and return new array of empty bedrooms
 //2.	Add functionality to check in guests to bedrooms for a number of nights.
+//- add additional parameter to checkinguests method for no of nights and multiply rate by number of nights
+
 
 // 3. // "refund" method extension ?
