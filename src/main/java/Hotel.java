@@ -10,13 +10,15 @@ public class Hotel {
     private ArrayList<DiningRoom> diningRooms;
 
 
-    public Hotel(String name, double till){
+    public Hotel(String name, double till, ArrayList<BedRoom> bedRooms, ArrayList<ConferenceRoom> conferenceRooms,
+                 ArrayList<DiningRoom> diningRooms ){
         this.name = name;
         this.till = till;
-        this.bedRooms = new ArrayList<>();
+        this.bedRooms = new ArrayList<>(bedRooms);
 // should I have separate array lists for vacant and occupied bedrooms ?
-        this.conferenceRooms = new ArrayList<>();
-        this.diningRooms = new ArrayList<>();
+        this.conferenceRooms = new ArrayList<>(conferenceRooms);
+        this.diningRooms = new ArrayList<>(diningRooms);
+// add code to cope when array lists of rooms are passed in or not to constructor i.e  create empty array list if not ??
     }
 
     public String getName() {
@@ -42,4 +44,20 @@ public class Hotel {
     public void removeBedRoom(BedRoom bedRoom) {
         this.bedRooms.remove(bedRoom);
     }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom) {
+        this.conferenceRooms.add(conferenceRoom);
+    }
+
+    public void removeConferenceRoom(ConferenceRoom conferenceRoom) {
+        this.conferenceRooms.remove(conferenceRoom);
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom) {
+        this.diningRooms.add(diningRoom);
+    }
+
+
+
+
 }
