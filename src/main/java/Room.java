@@ -4,7 +4,7 @@ public class Room {
 
     private int capacity;
     private boolean chargeable;
-    private ArrayList<Guest> guests;
+    protected ArrayList<Guest> guests;
 
     public Room(int capacity, boolean chargeable) {
         this.capacity = capacity;
@@ -30,5 +30,9 @@ public class Room {
 
     public boolean getChargeable() {
         return this.chargeable;
+    }
+
+    public void checkOutAllGuests() {
+        this.guests.clear();
     }
 }

@@ -19,8 +19,8 @@ public class Hotel {
 // should I have separate array lists for vacant and occupied bedrooms ?
         this.conferenceRooms = new ArrayList<>(conferenceRooms);
         this.diningRooms = new ArrayList<>(diningRooms);
-// add code to cope when array lists of rooms are passed in or not to constructor i.e  create empty array list if not ??
-    }
+
+}
 
     public String getName() {
         return this.name;
@@ -59,12 +59,13 @@ public class Hotel {
     }
 
 
-    public void checkInGuestsToRoom(ArrayList<Guest> guests, BedRoom bedroom) {
+    public void checkInGuestsToRoom(ArrayList<Guest> guests, BedRoom bedRoom) {
 
-        for (BedRoom bedRoom : this.bedRooms){
-            {
-            for (Guest guest : guests) {
-                bedroom.checkInGuest(guest);
+        for(BedRoom hotelBedRoom : this.bedRooms){
+            if(hotelBedRoom.equals(bedRoom)) {
+                for (Guest guest : guests) {
+                    hotelBedRoom.checkInGuest(guest);
+                }
             }
 
         }

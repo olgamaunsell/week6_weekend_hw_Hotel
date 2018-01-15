@@ -76,6 +76,7 @@ public class RoomTest {
     }
 
 
+
     @Test
 
     public void canCheckInTwoGuests() {
@@ -85,6 +86,16 @@ public class RoomTest {
 
         assertEquals(guestCountBefore + 2, room1.getGuestCount());
 
+    }
+
+    @Test
+
+    public void canCheckOutAllGuestsFromRoom() {
+        room1.checkInGuest(guest1);
+        room1.checkInGuest(guest2);
+        int guestCountBefore = room1.getGuestCount();
+        room1.checkOutAllGuests();
+        assertEquals(guestCountBefore - 2, room1.getGuestCount());
     }
 
 

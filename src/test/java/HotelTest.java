@@ -156,7 +156,7 @@ public class HotelTest {
 //4.  remove conf room from conf room list - done
 // add dining room to dining room list   - done
 
-//5. checkin guest(s) to a room (pass in array of guests)
+//5. checkin guest(s) to a room (pass in array of guests) - done
 // if room chargeable - "pay room" method uses room rate to add to hotel till
 // cant checkin guest group to room if exceeds capacity of room
 // can't checkin guest group to room if not empty
